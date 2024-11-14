@@ -77,6 +77,14 @@
             border-radius: 10px;
             object-fit: cover; /* Menjaga proporsi gambar */
         }
+    /* Atur ukuran tampilan untuk tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .profile-img {
+            display: block;
+            margin: 64px auto 0; /* Tambahkan margin atas */
+            text-align: center;
+        }
+    }
 
         /* Media query untuk menyembunyikan gambar di perangkat mobile */
         @media (max-width: 768px) {
@@ -176,6 +184,19 @@
         .logo img:last-child {
             margin-right: 0;
         }
+        @media (max-width: 768px) {
+        .logo img {
+            height: 230px; /* Sedikit lebih besar, agar tidak terlalu kecil */
+
+        .logo-container {
+            padding: 0.8rem; /* Mengurangi padding untuk tampilan lebih kecil */
+        }
+
+        .logo {
+            gap: 0.3rem; /* Mengurangi jarak antar logo */
+        }
+    }
+    
     </style>
 </head>
 <body>
@@ -255,31 +276,31 @@
     <div class="logo">
       <img
         src="1.png"
-        alt="Microsoft"
+        alt="1"
       />
       <img
         src="2.png"
-        alt="Airbnb"
+        alt="2"
       />
       <img
         src="3.png"
-        alt="gojek"
+        alt="3"
       />
       <img
         src="4.png"
-        alt="Tokopedia"
+        alt="4"
       />
       <img
         src="5.png"
-        alt="Efishery"
+        alt="5"
       />
       <img
         src="6.png"
-        alt="Netflix"
+        alt="6"
       />
       <img
         src="7.png"
-        alt="twitch"
+        alt="7"
       />
     </div>
 </div>
