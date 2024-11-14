@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="logo-p.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ghozi | Portofolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navbar links */
+        
+/* Navbar links */
+.navbar-nav .nav-link {
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative; /* Tambahkan relative positioning untuk penempatan garis bawah */
+    text-decoration: none; /* Menghapus garis bawah default */
+}
+
+.navbar-nav .nav-link::after {
+    content: ''; /* Menggunakan pseudo-element untuk garis bawah */
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000000; /* Warna garis bawah */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Animasi untuk membuat garis bawah muncul */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Memperluas garis bawah saat hover */
+}
+
+
+        /* Menghilangkan border pada toggle button */
+.navbar-toggler {
+    border: none;
+}
+
+        /* Social Media Icons */
+        .social-icons a {
+            text-decoration: none;
+            position: relative; /* Make sure the icon is positioned */
+        }
+
+        .social-icons img {
+            border: none;
+            outline: none;
+            transition: transform 0.3s ease, z-index 0s; /* Smooth transition for scaling */
+        }
+
+        /* Social Media Icons */
+        .social-icons a img {
+            filter: grayscale(100%); /* Gray out icons initially */
+            transition: filter 0.3s ease-out, transform 0.3s ease-out; /* Add ease-out effect */
+        }
+
+        .social-icons a:hover img {
+            filter: grayscale(0%); /* Restore original color */
+            transform: scale(1.2); /* Slightly enlarge icon on hover */
+        }
+
+        .intro-section {
+            padding: 60px 0;
+        }
+
+        .social-icons a {
+            margin-right: 15px;
+            color: #333;
+        }
+
+        .profile-img {
+            margin-left: 80px;
+            max-width: 100%;
+            border-radius: 10px;
+            object-fit: cover; /* Menjaga proporsi gambar */
+        }
+
+        /* Media query untuk menyembunyikan gambar di perangkat mobile */
+        @media (max-width: 768px) {
+            .profile-img {
+                display: none; /* Sembunyikan gambar pada perangkat dengan lebar layar 768px atau lebih kecil */
+            }
+            /* Typewriter effect untuk mobile */
+            .typewriter {
+                font-size: 1.5rem; /* Smaller font size on mobile */
+                width: 85%; /* Set width to 85% for mobile */
+                animation: typing-mobile 4s steps(30) forwards, blink-caret 0.75s step-end infinite;
+            }
+
+            @keyframes typing-mobile {
+                from {
+                    width: 0;
+                }
+                to {
+                    width: 92%; /* Set width to 85% for mobile */
+                }
+            }
+
+            .intro-section {
+                padding: 40px 15px; /* Adjust padding for mobile */
+            }
+            /* Marquee adjustments for mobile */
+            .logo img {
+                height: 120px; /* Mengubah ukuran gambar di marquee menjadi lebih kecil */
+            }
+
+            .logo-container {
+                overflow: hidden;
+                display: flex;
+                position: relative;
+            }
+
+            .logo {
+                display: flex;
+                flex-shrink: 0;
+                gap: 1rem;
+                padding: 1rem;
+                animation: infinite-scroll 15s linear infinite; /* Mengurangi durasi animasi untuk kecepatan lebih tinggi pada mobile */
+            }
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* Marquee Logo Container */
+        .logo-container {
+            overflow: hidden;
+            display: flex;
+            position: relative;
+        }
+
+        /* Animated logos inside the marquee */
+        .logo {
+            display: flex;
+            flex-shrink: 0;
+            gap: 1rem;
+            padding: 1rem;
+            animation: infinite-scroll 30s linear infinite;
+            transition: transform 0.4s ease-out; /* Smooth transition for hover effect */
+        }
+
+        .logo img {
+            height: 260px; /* Increased size */
+            margin-right: 2rem; /* Add spacing between images */
+            transition: transform 0.4s ease-out; /* Add smooth transition effect on hover */
+        }
+
+        /* Hover effect for the images */
+        .logo img:hover {
+            transform: scale(1.1); /* Slightly scale up the images on hover */
+        }
+
+        /* Infinite scroll animation for the logo */
+        @keyframes infinite-scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Ensure the first and last images have proper margin */
+        .logo img:first-child {
+            margin-left: 0;
+        }
+
+        .logo img:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="yose" width="50" height="50" class="d-inline-block align-text-top">
+        </a>
+
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#projects">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Introduction Section -->
+<section class="intro-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Section -->
+            <div class="col-lg-6">
+                <h2>Hello, it’s me</h2>
+                <span class="typewriter"><h1><b></b>Muhammad Ghozi Abdi Gusti</h1></span>
+                <p>
+                    I am an experienced UI/UX Designer and Front End Developer with a strong background in creating visually appealing and user-centered interfaces. I specialize in designing intuitive and responsive layouts, ensuring that each application provides an engaging and seamless user experience. Additionally, my expertise in front-end development with technologies like HTML, CSS, and JavaScript enables me to bring designs to life efficiently and effectively, delivering high-quality results on each project.
+                </p>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ghzi.co/" target="_blank">
+                        <img src="instagram-nobg.png" alt="Instagram" width="30" height="30">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ghozee-yea-522034337/" target="_blank">
+                        <img src="linkedin-nobg.png" alt="LinkedIn" width="30" height="30">
+                    </a>
+                    <a href="https://github.com/Ghozi123123123" target="_blank">
+                        <img src="github-nobg.png" alt="GitHub" width="30" height="30">
+                    </a>
+                    <a href="https://t.me/zekezekezekezeke" target="_blank">
+                        <img src="tele-nobg.png" alt="Telegram" width="30" height="30">
+                    </a>
+                    <a href="https://grafikarsa.com/members/ghozimahathir/" target="_blank">
+                        <img src="grafikarsa-nobg.png" alt="Grafikarsa" width="30" height="auto">
+                    </a>
+                </div>
+            </div>
+            <!-- Image Section -->
+            <div class="col-lg-6 text-center">
+                <img src="gif-anu.gif" alt="Profile Image" class="profile-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="logo-container">
+    <div class="logo">
+      <img
+        src="1.png"
+        alt="Microsoft"
+      />
+      <img
+        src="2.png"
+        alt="Airbnb"
+      />
+      <img
+        src="3.png"
+        alt="gojek"
+      />
+      <img
+        src="4.png"
+        alt="Tokopedia"
+      />
+      <img
+        src="5.png"
+        alt="Efishery"
+      />
+      <img
+        src="6.png"
+        alt="Netflix"
+      />
+      <img
+        src="7.png"
+        alt="twitch"
+      />
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const logo = document.querySelector(".logo").cloneNode(true);
+
+document.querySelector(".logo-container").appendChild(logo);
+</script>
+</body>
+</html>
